@@ -1,0 +1,15 @@
+CREATE DATABASE trabalho;
+
+USE trabalho;
+
+CREATE TABLE departamento (
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100)
+);
+
+CREATE TABLE funcionarios ( 
+id INTEGER AUTO_INCREMENT PRIMARY KEY, 
+nome VARCHAR(100), 
+cargo VARCHAR(50), 
+departamento VARCHAR(100) 
+);

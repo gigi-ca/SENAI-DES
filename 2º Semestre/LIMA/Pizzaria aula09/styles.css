@@ -1,0 +1,50 @@
+body {
+ font-family: Arial, sans-serif;
+ background-color: #f3c77a;
+ margin: 0; 
+ padding: 0;
+ display: flex;
+ justify-content: center;
+}
+.container {
+  width: 360px;
+  background-color: #f3c77a;
+  padding: 10px;
+}
+.back {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin: 10px 0;
+}
+.card {
+  background-color: #c3542a;
+  border-radius: 8px;
+  padding: 15px;
+  color: white;
+}
+.pizza-img {
+  display: block;
+  margin: 0 auto 15px auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.info {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.desc {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+.footer {
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}

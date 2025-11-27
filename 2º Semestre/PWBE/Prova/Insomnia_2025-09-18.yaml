@@ -1,0 +1,352 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1755785022503
+  modified: 1755785022503
+  description: ""
+collection:
+  - name: Professor
+    meta:
+      id: fld_b6e928791be543edb8ed72e2eb8374e8
+      created: 1756994983926
+      modified: 1756996374148
+      sortKey: -1756994983926
+      description: ""
+  - name: Disciplina
+    meta:
+      id: fld_e31ec75343e046a09e8911f036397205
+      created: 1757004986509
+      modified: 1757004986509
+      sortKey: -1757004986509
+      description: ""
+  - name: Turma
+    meta:
+      id: fld_0027dbe86f774615a57a2ffd08869cb6
+      created: 1757005489533
+      modified: 1757005489533
+      sortKey: -1757005489533
+      description: ""
+  - name: Possui
+    meta:
+      id: fld_e31043435d1c48698f0bfb67626fb9e0
+      created: 1757006108333
+      modified: 1757006108333
+      sortKey: -1757006108333
+      description: ""
+  - name: Prova
+    meta:
+      id: fld_12ca42079f3843648b1d56c5b20c7892
+      created: 1758200948471
+      modified: 1758200956876
+      sortKey: -1758200948471
+      description: ""
+    children:
+      - name: Clientes
+        meta:
+          id: fld_78d2d3da33f543a9aba4c931a0c6743c
+          created: 1758201006997
+          modified: 1758201006997
+          sortKey: -1758201006997
+          description: ""
+        children:
+          - url: http://localhost:5000/clientes/741.965.268-16
+            name: Buscar
+            meta:
+              id: req_da44fb8ced1c47488ce37420dfedf44d
+              created: 1758201010554
+              modified: 1758204221452
+              isPrivate: false
+              description: ""
+              sortKey: -1758201010554
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/cliente
+            name: Cadastrar
+            meta:
+              id: req_a19a3e44d759437cba666154723d2ed1
+              created: 1758201055188
+              modified: 1758204173727
+              isPrivate: false
+              description: ""
+              sortKey: -1758201055188
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                        "nome completo":"Joelma Rodrigues Santos",
+                        "e-    mail":"rodriguessantosjo@hotmail.com",
+                        "CPF":"459.201.783-45",
+                        "telefone":"(43)49615-2031",
+                        "endereço":"Rua Vitoria Regia, 360"
+                    }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Pedidos
+        meta:
+          id: fld_25774bc22ad44c50b3c6190822b902d6
+          created: 1758203466921
+          modified: 1758203466921
+          sortKey: -1758203466921
+          description: ""
+        children:
+          - url: http://localhost:5000/pedidos
+            name: Listar
+            meta:
+              id: req_37ad5ac56bee4ad8a2d9571ad4068fbf
+              created: 1758203480264
+              modified: 1758204295155
+              isPrivate: false
+              description: ""
+              sortKey: -1758203480264
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/pedidos/2
+            name: Buscar
+            meta:
+              id: req_bff3cb8a8c90446ba4e56c7ef21cf80b
+              created: 1758203482607
+              modified: 1758204918785
+              isPrivate: false
+              description: ""
+              sortKey: -1758203482607
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/pedido
+            name: Cadastrar
+            meta:
+              id: req_cec3beafcc8d481495f2d4cb75ee69a6
+              created: 1758203493517
+              modified: 1758205083405
+              isPrivate: false
+              description: ""
+              sortKey: -1758203493517
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                        "id":"3",
+                        "nome do cliente":"Joelma Rodrigues Santos",
+                        "produto":"Mochila escolar",
+                        "quantidade":"1",
+                        "data":"16/07/2025",
+                        "status":"pendente"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/pedido
+            name: Atualizar
+            meta:
+              id: req_4a3a91954cd7424e831644905ba9f580
+              created: 1758203495619
+              modified: 1758205387066
+              isPrivate: false
+              description: ""
+              sortKey: -1758203495619
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                        "id":"2",
+                        "nome do cliente":"Vitor de Andrade",
+                        "produto":"Blusa preta e branca",
+                        "quantidade":"2",
+                        "data":"04/09/2025",
+                        "status":"entregue"
+                    }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Produtos
+        meta:
+          id: fld_f589cf0240a14429a549a432ae750d79
+          created: 1758203526908
+          modified: 1758203526908
+          sortKey: -1758203526908
+          description: ""
+        children:
+          - url: http://localhost:5000/produtos/123
+            name: Buscar
+            meta:
+              id: req_d4e488272c144a399c022e24b865a291
+              created: 1758203538517
+              modified: 1758205423698
+              isPrivate: false
+              description: ""
+              sortKey: -1758203538517
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/produto
+            name: Atualizar
+            meta:
+              id: req_5a8177b7f5dd49d784b5e9ec21cd186e
+              created: 1758203540769
+              modified: 1758205550743
+              isPrivate: false
+              description: ""
+              sortKey: -1758203540769
+            method: PUT
+            body:
+              mimeType: application/json
+              text: >2-
+                 {
+                        "codigo":"456",
+                        "nome":"Boné esportivo",
+                        "descrição":"Boné feito para correr, para ir a academia e atividades fisicas",
+                        "preço":"75,80",
+                        "quantidade no estoque":"20"
+                    }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/produto/123
+            name: Alterar
+            meta:
+              id: req_1244e7ebfdb84f69b6fe726f7ba7d845
+              created: 1758203543046
+              modified: 1758205597520
+              isPrivate: false
+              description: ""
+              sortKey: -1758203543046
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |2-
+                 {
+                        "quantidade no estoque":"30"
+                    }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/produtos/:123
+            name: Excluir
+            meta:
+              id: req_561e49b2cdcb46dcb1faf4070141970b
+              created: 1758203549907
+              modified: 1758205663576
+              isPrivate: false
+              description: ""
+              sortKey: -1758203549907
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: "123"
+                value: ""
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1755785172162
+    modified: 1755785172162
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1755785172016
+    modified: 1755785172016
+    isPrivate: false

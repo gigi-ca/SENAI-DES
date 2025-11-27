@@ -1,0 +1,161 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 1000vh;
+}
+
+.container {
+    width: 50vw;
+    height: 50vh;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-around;
+    /*overflow: scroll;*/
+/* }
+
+.box{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+
+header{
+    width: 100vw;
+    height: 10vh;
+    background-color: darkseagreen;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+}
+
+.menu{
+    width: 500px;
+    height: 50px;
+    background-color: orange;
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100vw;
+    height: 10vh;
+    background-color: #820749;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.container{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+}
+
+nav{
+    width: 200px;
+    height: 90vh;
+    background-color: #c84c81;
+    transition: .2s;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    width: 200px;
+    height: 40px;
+    padding: 5px;
+    color: rgb(126, 0, 52);
+}
+
+nav ul li:hover{
+    cursor: pointer;
+    background-color: #f395bcb5;
+}
+
+.content{
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.box{
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: #f7d5e3b4;
+}
+
+.box img{
+   width: 100%;
+   max-height: 80%;
+   border-radius: 5px 5px 0 0;
+}
+
+.box p {
+    color: rgb(128, 1, 64);
+    font-size: 16px;
+}
+
+.box #nome{
+    font-weight: bold;
+}
+
+.box button{
+    width: 70%;
+    padding: 5px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(160, 0, 59);
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    align-self: center;
+}
+
+.box .info{
+    height: 35%;
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu{
+    display: none;
+}
+
+@media (max-width: 700px){
+    .menu{
+        display: block;
+    }
+    nav{
+        position: absolute;
+        top: 0;
+        left: -200px;
+        height: 100vh;
+    }
+}

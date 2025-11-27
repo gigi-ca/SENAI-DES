@@ -1,0 +1,19 @@
+DROP DATABASE teste;
+
+CREATE DATABASE teste;
+
+USE teste;
+
+CREATE TABLE alunos(
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100),
+email VARCHAR(100)
+);
+
+CREATE TABLE matriculas(
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+aluno_id INTEGER,
+curso VARCHAR(100),
+data_matricula DATE,
+FOREIGN KEY (aluno_id) REFERENCES alunos(id)
+);

@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff7fa;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ===== TÍTULO ===== */
+h1 {
+    text-align: center;
+    font-size: 34px;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+/* ===== CONTAINER GERAL ===== */
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 90px;          /* <<< DISTÂNCIA ENTRE OS CARDS */
+    padding-bottom: 60px;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    width: 380px;
+    max-width: 90%;
+    text-align: center;
+
+    margin-bottom: 20px;  /* <<< GARANTIA DE ESPAÇO SEM GRUDAR */
+}
+
+/* ===== TÍTULO DO CARD ===== */
+.card h2 {
+    margin-bottom: 18px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* ===== CAMPOS ===== */
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e9f1ff;
+    margin-bottom: 14px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* ===== BOTÃO ===== */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #bd5b6a;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #a54c59;
+}
+
+/* ===== LINK CADASTRO ===== */
+.link-cadastro {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0044cc;
+    font-size: 15px;
+}
+
+.link-cadastro:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 480px) {
+    .card {
+        width: 92%;
+        padding: 22px;
+    }
+}

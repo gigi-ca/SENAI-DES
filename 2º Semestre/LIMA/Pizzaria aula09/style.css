@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #fdd48a;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.usuario img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header h1 {
+  font-size: 22px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.pedidos-section h2 {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.pedidos {
+  background-color: #ba4326;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
+
+.pedidos a{
+  text-decoration: none;
+  color: white;
+}
+
+.pedido {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.pedido:last-child {
+  margin-bottom: 0;
+}
+
+.pedido img {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.pedido p {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.promocao-section {
+  margin-top: 25px;
+}
+
+.promocao {
+  background-color: #ba4326;
+  border-radius: 10px;
+  padding: 15px;
+  color: white;
+  text-align: center;
+}
+
+.promocao img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.promocao h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.promocao p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.promocao small {
+  font-size: 12px;
+  display: block;
+}
+
+.footer {
+  margin-top: 25px;
+  background-color: #f0d6a6;
+  padding: 12px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p {
+  font-size: 14px;
+}
+
+.social-icons img {
+  width: 22px;
+  height: 22px;
+  margin-left: 10px;
+}

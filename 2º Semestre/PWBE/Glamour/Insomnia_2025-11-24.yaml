@@ -1,0 +1,703 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1755785022503
+  modified: 1755785022503
+  description: ""
+collection:
+  - name: Professor
+    meta:
+      id: fld_b6e928791be543edb8ed72e2eb8374e8
+      created: 1756994983926
+      modified: 1756996374148
+      sortKey: -1756994983926
+      description: ""
+  - name: Disciplina
+    meta:
+      id: fld_e31ec75343e046a09e8911f036397205
+      created: 1757004986509
+      modified: 1757004986509
+      sortKey: -1757004986509
+      description: ""
+  - name: Turma
+    meta:
+      id: fld_0027dbe86f774615a57a2ffd08869cb6
+      created: 1757005489533
+      modified: 1757005489533
+      sortKey: -1757005489533
+      description: ""
+  - name: Possui
+    meta:
+      id: fld_e31043435d1c48698f0bfb67626fb9e0
+      created: 1757006108333
+      modified: 1757006108333
+      sortKey: -1757006108333
+      description: ""
+  - name: Prova
+    meta:
+      id: fld_12ca42079f3843648b1d56c5b20c7892
+      created: 1758200948471
+      modified: 1758200956876
+      sortKey: -1758200948471
+      description: ""
+    children:
+      - name: Clientes
+        meta:
+          id: fld_78d2d3da33f543a9aba4c931a0c6743c
+          created: 1758201006997
+          modified: 1758201006997
+          sortKey: -1758201006997
+          description: ""
+      - name: Pedidos
+        meta:
+          id: fld_25774bc22ad44c50b3c6190822b902d6
+          created: 1758203466921
+          modified: 1758203466921
+          sortKey: -1758203466921
+          description: ""
+      - name: Produtos
+        meta:
+          id: fld_f589cf0240a14429a549a432ae750d79
+          created: 1758203526908
+          modified: 1758203526908
+          sortKey: -1758203526908
+          description: ""
+  - name: Locadora
+    meta:
+      id: fld_c0bc507a130940e88dc746a189e8c44f
+      created: 1758807751201
+      modified: 1758807751201
+      sortKey: -1758807751201
+      description: ""
+  - name: Espaço Glamour
+    meta:
+      id: fld_f636c8730f9d473ea830597637367b5a
+      created: 1763993126253
+      modified: 1763993744784
+      sortKey: -1761400710387
+      description: ""
+    children:
+      - name: Agendamentos
+        meta:
+          id: fld_62e2cf6527034991b17df847445ad11d
+          created: 1763993493717
+          modified: 1763993493717
+          sortKey: -1763993493717
+          description: ""
+        children:
+          - url: http://localhost:3000/agendamentos/7
+            name: Atualizar
+            meta:
+              id: req_8b5ef8bb9412421fbe09c1957a9a27d2
+              created: 1763993586021
+              modified: 1764012441157
+              isPrivate: false
+              description: ""
+              sortKey: -1763993586021
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id_cliente": 5,
+                	"id_profissional": 2,
+                	"id_servico": 1,
+                	"data": "2025-07-30",
+                	"status": "cancelado"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/agendamentos/2
+            name: Excluir
+            meta:
+              id: req_de14c4537f454bb883fe05aaf384c5ef
+              created: 1763993588842
+              modified: 1764012084871
+              isPrivate: false
+              description: ""
+              sortKey: -1763993588842
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/agendamentos
+            name: Cadastrar
+            meta:
+              id: req_850d1af56a71409c9322e1b63fdee2f1
+              created: 1763993591567
+              modified: 1764012058766
+              isPrivate: false
+              description: ""
+              sortKey: -1763993591567
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id_cliente": 2,
+                	"id_profissional": 5,
+                	"id_servico": 1,
+                	"data": "2025-07-30",
+                	"status": "concluido"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/agendamentos/2
+            name: Buscar
+            meta:
+              id: req_387375ae838348fba07da31f7560f130
+              created: 1763993593968
+              modified: 1764011967735
+              isPrivate: false
+              description: ""
+              sortKey: -1763993593968
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/agendamentos
+            name: Listar
+            meta:
+              id: req_df2597024cae4fe483b761e192692d6d
+              created: 1763993601235
+              modified: 1764011954208
+              isPrivate: false
+              description: ""
+              sortKey: -1763993601235
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Clientes
+        meta:
+          id: fld_8de1910504074a20b566129032718066
+          created: 1763993508767
+          modified: 1763993508767
+          sortKey: -1763993508767
+          description: ""
+        children:
+          - url: http://localhost:3000/clientes/1
+            name: Atualizar
+            meta:
+              id: req_d01a2942f4664d8583cfac8be60279b7
+              created: 1763993787676
+              modified: 1764011936912
+              isPrivate: false
+              description: ""
+              sortKey: -1763993787676
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome":"Laís Machado",
+                  "email":"lmachado@gmail",
+                	"telefone":"(19)85962-4552"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/clientes/7
+            name: Excluir
+            meta:
+              id: req_a22f20d3dec54361b4d3485d2eba7d16
+              created: 1763993790389
+              modified: 1764011754694
+              isPrivate: false
+              description: ""
+              sortKey: -1763993790389
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/clientes
+            name: Cadastrar
+            meta:
+              id: req_434d0373c6174fecb5c3817e5a3ecd38
+              created: 1763993792949
+              modified: 1764011736471
+              isPrivate: false
+              description: ""
+              sortKey: -1763993792949
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome":"Juju do Pix",
+                	"email":"pixdajuju@hotmail",
+                	"telefone":"(15)15428-7598"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/clientes/3
+            name: Buscar
+            meta:
+              id: req_f597fd041cdb46b0a6ba31395e3d822b
+              created: 1763993794995
+              modified: 1764011616172
+              isPrivate: false
+              description: ""
+              sortKey: -1763993794995
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/clientes
+            name: Listar
+            meta:
+              id: req_6db5d1eb490e4cc49cea4a4cd3d6e8e0
+              created: 1763993797518
+              modified: 1764011571159
+              isPrivate: false
+              description: ""
+              sortKey: -1763993797518
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Login
+        meta:
+          id: fld_e3cf8ae6b81b45098ec4dcf41c14e074
+          created: 1763993539066
+          modified: 1763993539066
+          sortKey: -1763993539066
+          description: ""
+        children:
+          - url: http://localhost:3000/validate
+            name: Validar
+            meta:
+              id: req_b31e042f76344e68993cb18e91d4391d
+              created: 1763993841337
+              modified: 1764010354898
+              isPrivate: false
+              description: ""
+              sortKey: -1763993841337
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/cadastrar
+            name: Cadastrar
+            meta:
+              id: req_edf7cce160534b9ea32f22ffbf3b91fc
+              created: 1763993843546
+              modified: 1764008708819
+              isPrivate: false
+              description: ""
+              sortKey: -1763993843546
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome":"Luis Felisbelo",
+                	"email":"lulufelis@gmail",
+                	"telefone":"(24)78542-6542",
+                	"endereço":"Rua José Santos, 38",
+                	"especialidade":"Cabeleleiro",
+                	"status":"inativo",
+                	"senha": "123456"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/login
+            name: Login
+            meta:
+              id: req_8c6ce98636094dc5ae4d4af12fdaf279
+              created: 1763993845785
+              modified: 1764010292929
+              isPrivate: false
+              description: ""
+              sortKey: -1763993845785
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"email":"lulufelis@gmail",
+                	"senha":"123456"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Profissionais
+        meta:
+          id: fld_793e87f073dd4dceb6054cf28a6007f8
+          created: 1763993559085
+          modified: 1763993559085
+          sortKey: -1763993559085
+          description: ""
+        children:
+          - url: http://localhost:3000/profissionais/7
+            name: Atualizar
+            meta:
+              id: req_49f854ae7785453597b4176dfd8cdbc2
+              created: 1763993811310
+              modified: 1764011154749
+              isPrivate: false
+              description: ""
+              sortKey: -1763993811311
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome":"Luis Felisbelo",
+                	"email":"luifelis@gmail",
+                	"telefone":"(24)78542-6542",
+                	"endereço":"Rua José Santos, 38",
+                	"especialidade":"Cabeleleiro",
+                	"status":"inativo",
+                	"senha":"e10adc3949ba59abbe56e057f20f883e"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/profissionais/5
+            name: Excluir
+            meta:
+              id: req_e72652a4ae4e4d48ac48931429851eea
+              created: 1763993813443
+              modified: 1764010923388
+              isPrivate: false
+              description: ""
+              sortKey: -1763993813443
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/profissionais/3
+            name: Buscar
+            meta:
+              id: req_83e125e38b314d2b828151485d74bbff
+              created: 1763993815229
+              modified: 1764010909456
+              isPrivate: false
+              description: ""
+              sortKey: -1763993815229
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/profissionais
+            name: Listar
+            meta:
+              id: req_da1812196b624c4aa9c36dc5a825ec0c
+              created: 1763993817090
+              modified: 1764010894451
+              isPrivate: false
+              description: ""
+              sortKey: -1763993817090
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Serviços
+        meta:
+          id: fld_3bda182773dc48f8b0866e6faa4f856c
+          created: 1763993581800
+          modified: 1763993581800
+          sortKey: -1763993581800
+          description: ""
+        children:
+          - url: http://localhost:3000/servicos/8
+            name: Atualizar
+            meta:
+              id: req_86253b7e341e4c5a8667db97d6303cce
+              created: 1763993821802
+              modified: 1764010825596
+              isPrivate: false
+              description: ""
+              sortKey: -1763993821802
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome":"Esmaltação em gel",
+                	"preco":"100.00",
+                	"duracao":"1:45"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/servicos/3
+            name: Excluir
+            meta:
+              id: req_046cad0cd2d54e0c98c8658a24ad441a
+              created: 1763993823741
+              modified: 1764010764303
+              isPrivate: false
+              description: ""
+              sortKey: -1763993823741
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/servicos
+            name: Cadastrar
+            meta:
+              id: req_9b7bfb3dad0d4151a54bb1f0ac045371
+              created: 1763993830380
+              modified: 1764010683740
+              isPrivate: false
+              description: ""
+              sortKey: -1763993830380
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome":"esmaltação em gel",
+                	"preco":"80.50",
+                	"duracao":"1:45"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/servicos/3
+            name: Buscar
+            meta:
+              id: req_9be4bc41ec7e471ab044ecb66ccf4cb1
+              created: 1763993832628
+              modified: 1764010470041
+              isPrivate: false
+              description: ""
+              sortKey: -1763993832628
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/servicos
+            name: Listar
+            meta:
+              id: req_2e02105a568f420d967dec5ecdc94d8b
+              created: 1763993837410
+              modified: 1764010421211
+              isPrivate: false
+              description: ""
+              sortKey: -1763993837410
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+  - name: Teste
+    meta:
+      id: fld_1d95f3f793b741dcacf5f2c980be16b2
+      created: 1763993669373
+      modified: 1763993736936
+      sortKey: -1761400710287
+      description: ""
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1755785172162
+    modified: 1755785172162
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1755785172016
+    modified: 1755785172016
+    isPrivate: false

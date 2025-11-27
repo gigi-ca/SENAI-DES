@@ -1,0 +1,128 @@
+DROP DATABASE Glamour;
+
+CREATE DATABASE Glamour;
+
+USE Glamour;
+
+CREATE TABLE clientes(
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(160),
+email VARCHAR(100),
+telefone VARCHAR(14)
+);
+
+CREATE TABLE profissionais(
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(160),
+email VARCHAR(100),
+telefone VARCHAR(14),
+endereço VARCHAR(100),
+especialidade VARCHAR(30),
+status VARCHAR(15)
+);
+
+CREATE TABLE servicos(
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(160),
+preco VARCHAR(8),
+duracao TIME
+);
+
+CREATE TABLE agendamentos(
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+id_cliente INTEGER,
+id_profissional INTEGER,
+id_servico INTEGER,
+data DATE,
+status VARCHAR(15),
+FOREIGN KEY (id_cliente) REFERENCES clientes(id),
+FOREIGN KEY (id_profissional) REFERENCES profissionais(id),
+FOREIGN KEY (id_servico) REFERENCES servicos(id)
+);
+
+INSERT INTO clientes
+VALUES (DEFAULT, "Laís Machado", "lamachado@gmail", "(19)85962-4552");
+
+INSERT INTO clientes
+VALUES (DEFAULT, "Lucas O Grande", "ograndelucas@hotmail", "(11)45206-8759");
+
+INSERT INTO clientes
+VALUES (DEFAULT, "Nina Alfajor", "alfanina@icloud", "(56)85426-9621");
+
+INSERT INTO clientes
+VALUES (DEFAULT, "Raimunda Imunda", "imunrai@gmail", "(21)57426-8420");
+
+INSERT INTO clientes
+VALUES (DEFAULT, "Camila Octaviana", "octaviacamis@gmail", "(77)87520-1568");
+
+INSERT INTO clientes
+VALUES (DEFAULT, "Mariana Silva", "marisilvaa@icloud", "(11)98765-4321");
+
+INSERT INTO clientes
+VALUES (DEFAULT, "Rafael Oliveira", "olirafael@hotmail", "(32)98071-6455");
+
+INSERT INTO profissionais
+VALUES (DEFAULT, "Carla Mendes", "carla_mendes@hotmail", "(11)28654-3210", "Rua das Rosas, 45", "Especialista em curvatura", "ativo");
+
+INSERT INTO profissionais
+VALUES (DEFAULT, "Juliana Rocha", "rochajuli@gmail", "(41)98417-5541", "Rua XV de Novembro, 75", "Manicure e pedicure", "ativo");
+
+INSERT INTO profissionais
+VALUES (DEFAULT, "Bruno Almeida", "almeidabruno@icloud", "(21)93785-1476", "Av. Atlântica, 980", "Cabeleireiro", "ativo");
+
+INSERT INTO profissionais
+VALUES (DEFAULT, "Luana Pereira", "luanapereira@gmail", "(51)98234-7984", "Rua da Praia, 500", "Esteticista", "inativo");
+
+INSERT INTO profissionais
+VALUES (DEFAULT, "Fernanda Costa", "costafer@hotmail", "(31)15482-9584", "Rua das Acácias, 120", "Tricologista", "ativo");
+
+INSERT INTO profissionais
+VALUES (DEFAULT, "Natália Moreira", "morenatalia@hotmail", "(61)98174-3648", "Rua São João, 57", "Maquiador", "ativo");
+
+INSERT INTO servicos
+VALUES (DEFAULT, "Escova modelada", "80.99", "1:50");
+
+INSERT INTO servicos
+VALUES (DEFAULT, "Coloração completa", "150.00", "2:00");
+
+INSERT INTO servicos
+VALUES (DEFAULT, "Hidratação capilar", "90.50", "1:00");
+
+INSERT INTO servicos
+VALUES (DEFAULT, "Manicure e pedicure", "78.00", "1:15");
+
+INSERT INTO servicos
+VALUES (DEFAULT, "Limpeza de pele", "120.00", "2:30");
+
+INSERT INTO servicos
+VALUES (DEFAULT, "Maquiagem", "130.00", "2:50");
+
+INSERT INTO agendamentos
+VALUES (DEFAULT, "5", "2", "4", "2024-05-20", "concluido");
+
+INSERT INTO agendamentos
+VALUES (DEFAULT, "6", "1", "3", "2025-02-16", "cancelado");
+
+INSERT INTO agendamentos
+VALUES (DEFAULT, "1", "3", "7", "2024-12-23", "concluido");
+
+INSERT INTO agendamentos
+VALUES (DEFAULT, "2", "2", "6", "2025-12-11", "agendado");
+
+INSERT INTO agendamentos
+VALUES (DEFAULT, "4", "2", "4", "2025-10-28", "concluido");
+
+INSERT INTO agendamentos
+VALUES (DEFAULT, "3", "4", "1", "2025-11-07", "cancelado");
+
+SELECT * FROM agendamentos WHERE id_profissional = 2;
+
+SELECT * FROM agendamentos WHERE id_cliente = 4
+ORDER BY data DESC;
+
+SELECT clientes.nome, SUM(preco) AS total_servico FROM agendamentos
+INNER JOIN clientes ON clientes.id = agendamentos.id_cliente
+INNER JOIN servicos ON servicos.id = agendamentos.id_servico GROUP BY clientes.id
+
+SELECT * FROM agendamentos WHERE id_profissional = 4 AND data = '2025-11-07'
+

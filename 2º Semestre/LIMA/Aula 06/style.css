@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e8b057d8;
+  color: #023033;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d16500a6;
+  padding: 10px 20px;
+  color: rgb(139, 43, 5);
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: rgb(230, 221, 120);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cartoes{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.cartao1 {
+  background-color: rgba(255, 213, 213, 0.559);
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 0 4px 10px rgb(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.cartao1 img {
+    display: inline-block;
+    width: 100%;
+    border-radius: 8px;
+}

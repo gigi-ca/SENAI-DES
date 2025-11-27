@@ -1,0 +1,89 @@
+DROP DATABASE extra;
+
+CREATE DATABASE extra;
+
+USE extra;
+
+CREATE TABLE alunos(
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(160),
+turma VARCHAR(11)
+);
+
+CREATE TABLE oficinas(
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(160),
+cateoria VARCHAR(100),
+vagas DECIMAL
+);
+
+CREATE TABLE inscricoes(
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+data_inscricao DATE,
+id_aluno INTEGER,
+id_oficina INTEGER,
+FOREIGN KEY (id_aluno) REFERENCES alunos(id),
+FOREIGN KEY (id_oficina) REFERENCES oficinas(id)
+);
+
+USE extra;
+
+INSERT INTO alunos
+VALUES (DEFAULT, "Laís Machado", "3º A");
+
+INSERT INTO alunos
+VALUES (DEFAULT, "Nina Alfajor", "1º B");
+
+INSERT INTO alunos
+VALUES (DEFAULT, "Rafael Oliveira", "9º B");
+
+INSERT INTO alunos
+VALUES (DEFAULT, "Lucas O Grande", "2º A");
+
+INSERT INTO alunos
+VALUES (DEFAULT, "Camila Octaviana", "3º B");
+
+INSERT INTO alunos
+VALUES (DEFAULT, "Bruno Almeida", "1º A");
+
+INSERT INTO oficinas
+VALUES(DEFAULT, "Robótica", "Informática", "7");
+
+INSERT INTO oficinas
+VALUES(DEFAULT, "Teatro", "Arte", "20");
+
+INSERT INTO oficinas
+VALUES(DEFAULT, "Xadrez", "Lógica", "5");
+
+INSERT INTO oficinas
+VALUES(DEFAULT, "Dança", "Arte", "10");
+
+INSERT INTO oficinas
+VALUES(DEFAULT, "Música", "Arte", "23");
+
+INSERT INTO oficinas
+VALUES(DEFAULT, "Artes", "Arte", "13");
+
+INSERT INTO inscricoes
+VALUES(DEFAULT, "2025-10-29", "2", "4");
+
+INSERT INTO inscricoes
+VALUES(DEFAULT, "2024-04-08", "3", "2");
+
+INSERT INTO inscricoes
+VALUES(DEFAULT, "2025-01-30", "6", "5");
+
+INSERT INTO inscricoes
+VALUES(DEFAULT, "2024-11-27", "1", "1");
+
+INSERT INTO inscricoes
+VALUES(DEFAULT, "2025-06-14", "5", "6");
+
+INSERT INTO inscricoes
+VALUES(DEFAULT, "2024-03-13", "4", "3");
+
+SELECT oficinas.nome AS oficinas, COUNT(inscricoes.id) AS total_inscricoes FROM oficinas
+INNER JOIN inscricoes ON oficinas.id = inscricoes.id_oficina GROUP BY oficinas.nome;
+
+SELECT oficinas.cateoria AS categoria, COUNT(inscricoes.id) AS total_inscricoes FROM oficinas
+INNER JOIN inscricoes ON oficinas.id = inscricoes.id_oficina GROUP BY oficinas.cateoria;

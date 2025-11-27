@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #63B8FF;
+    color: #000;
+    line-height: 1.6;
+}
+header {
+    text-align: center;
+    padding: 25px;
+    background: #35acd6;
+    color: #04445c;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+header h2 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 40px 20px;
+}
+.card1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #13598a90;
+    border-radius: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.card1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 67, 149, 0.6);
+}
+.card1 img {
+    width: 220px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+}
+.card {
+    background: #13598a90;
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 900px;
+    text-align: justify;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 67, 149, 0.6);
+}

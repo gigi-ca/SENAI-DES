@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locadora de Filmes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Alugar Filmes</h1>
+        <button onclick="abrirModal()">+ Novo Filme</button>
+    </header>
+    <input type="text" id="pesquisa" placeholder="Pesquisar por gênero..." onkeyup="filtrarGenero()">
+    <main>
+        <table>
+        <thead>
+            <tr>
+                <th>Capa</th>
+                <th>Titulo</th>
+                <th>Descrição</th>
+                <th>Tempo</th>
+                <th>Ano de lançamento</th>
+                <th>Gênero</th>
+                <th>Produtora</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="dados"></tbody>
+    </table>
+    </main>
+    <!--criar modal-->
+    <div id="modalCli" class="modal">
+        <form id="formCli" class="modal-content">
+            <h2>Novo Filme</h2>
+            <input type="text" name ="capa" placeholder="URL da Capa">
+            <input type="text" name  ="titulo" placeholder="Titulo">
+            <input type="text" name ="descricao" placeholder="Descrição">
+            <input type="text" name ="tempo" placeholder="Tempo">
+            <input type="number" name ="ano" placeholder="Ano de Lançamento">
+            <input type="text" name ="genero" placeholder="Gênero">
+            <input type="text" name ="produtora" placeholder="Produtora">
+
+            <div class="modal-buttons">
+                <button type="submit">Salvar</button>
+                <button type = "reset" onclick="fecharModal()">Cancelar</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

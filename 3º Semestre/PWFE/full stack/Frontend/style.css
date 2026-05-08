@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #e6e6e6;
+}
+
+/* HEADER */
+header {
+  background: #ff5c3a;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.header-actions input {
+  width: 180px;
+  padding: 6px;
+  border-radius: 15px;
+  border: none;
+}
+
+.header-actions button {
+  background: gold;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* CARD LIMPO */
+.card {
+  background: orange;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  top: 0;
+  left: 0;
+}
+
+.modal-content {
+  background: white;
+  width: 300px;
+  margin: 8% auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal-content input {
+  width: 90%;
+  margin: 5px 0;
+  padding: 8px;
+}
+
+.modal-content button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #28a745;
+  color: white;
+  border: none;
+}
+
+/* botões detalhes */
+#btnEditar {
+  background: #007bff;
+}
+
+#btnExcluir {
+  margin-top: 5px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  color: white;
+}
+
+#fecharModal, #fecharDetalhes {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Produtos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Lista de Produtos</h1>
+
+  <div class="header-actions">
+    <input type="text" id="pesquisa" placeholder="Pesquisar...">
+    <button id="abrirModal">Adicionar Produto</button>
+  </div>
+</header>
+
+<main>
+  <div id="listaCards" class="grid"></div>
+</main>
+
+<!-- MODAL CRIAR/EDITAR -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="fecharModal">&times;</span>
+    <h2 id="tituloModal">Novo Produto</h2>
+
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="text" id="tipo" placeholder="Tipo">
+    <input type="number" id="preco" placeholder="Preço">
+    <input type="text" id="marca" placeholder="Marca">
+    <input type="file" id="imagem" accept="image/*">
+
+    <button id="btnSalvar">Salvar</button>
+  </div>
+</div>
+
+<!-- MODAL DETALHES -->
+<div id="modalDetalhes" class="modal">
+  <div class="modal-content">
+    <span id="fecharDetalhes">&times;</span>
+
+    <div id="detalhesConteudo"></div>
+
+    <button id="btnEditar">Editar</button>
+    <button id="btnExcluir" style="background:red;">Excluir</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

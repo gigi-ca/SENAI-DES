@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confronto dos Elementos</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topo">
+
+        <button class="regras-button" onclick="mostraregras()">
+            REGRAS
+        </button>
+
+        <div class="placar">
+
+            <h2>PONTUAÇÃO</h2>
+
+            <p class="pontuacao">0</p>
+
+        </div>
+
+    </header>
+
+    <div class="regras">
+
+        <div class="box-regras">
+
+            <div class="titulo-regras">
+
+                <button onclick="fecharegras()">
+                    X
+                </button>
+
+            </div>
+
+            <div class="imagem-regras">
+
+                <img src="assets/regra.jpeg" alt="regras">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <main class="jogo">
+
+        <h1 class="titulo">
+            CONFRONTO DOS ELEMENTOS
+        </h1>
+
+        <p class="subtitulo">
+            Escolha seu elemento e vença!
+        </p>
+        <div class="opcoes">
+            <div class="container container-terra" onclick="jogar(terra)">
+                <button value="terra" class="terra opcao">
+                    <img src="assets/terra.png" alt="terra">
+                </button>
+                <p>TERRA</p>
+            </div>
+
+            <div class="container container-agua" onclick="jogar(agua)">
+                <button value="agua" class="agua opcao">
+                    <img src="assets/agua.png" alt="agua">
+                </button>
+                <p>ÁGUA</p>
+            </div>
+
+            <div class="container container-fogo" onclick="jogar(fogo)">
+                <button value="fogo" class="fogo opcao">
+                    <img src="assets/fogo.png" alt="fogo">
+                </button>
+                <p>FOGO</p>
+            </div>
+
+            <div class="container container-ar" onclick="jogar(ar)">
+                <button value="ar" class="ar opcao">
+                    <img src="assets/ar.png" alt="ar">
+                </button>
+                <p>AR</p>
+            </div>
+
+            <div class="container container-raio" onclick="jogar(raio)">
+                <button value="raio" class="raio opcao">
+                    <img src="assets/raio.png" alt="raio">
+                </button>
+                <p>RAIO</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <section class="gameplay">
+
+        <div class="arena">
+            <div class="lado">
+                <h2>VOCÊ</h2>
+                <div class="teste"></div>
+            </div>
+
+            <div class="vs">
+
+                VS
+
+            </div>
+
+            <div class="lado">
+                <h2>OPONENTE</h2>
+                <div class="teste1"></div>
+            </div>
+
+        </div>
+
+        <div class="fim">
+            <p class="result"></p>
+            <button class="playAgain" onclick="reset()">
+                JOGAR NOVAMENTE
+            </button>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
